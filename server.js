@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static('./dist/arcadia-app-heroku/'));
 
 app.get('/*',(req,res) =>
-res.sendFile('index.html',{root:'dist/arcadia-app-heroku/'}),
+res.sendFile('index.html',{root:'dist/arcadia-app-heroku/browser/'}),
 );
 
 app.listen(process.env.PORT || 8080);
